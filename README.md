@@ -18,5 +18,3 @@ This portfolio is built using React and serves as a platform to display my ongoi
 - Project showcase
 - Contact form
 - Smooth animations
-
-
