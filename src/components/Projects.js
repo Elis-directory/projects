@@ -1,6 +1,9 @@
 import React from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import ThumbnailRedirect from './ThumbnailRedirect';
+import placeholderImage from './placeholder.png';
 
 const Projects = () => {
 const responsive = {
@@ -26,11 +29,23 @@ const responsive = {
   return (
     <section id="projects">
       <h2>Projects</h2>
-      <p>Here are some of my projects.</p>
+     
 	<Carousel responsive={responsive}>
-  		<div>Item 1</div>
- 		<div>Item 2</div>
-  		<div>Item 3</div>
+  		<div>
+ 		<ThumbnailRedirect 
+           		websiteUrl="http://localhost:3001" // URL to your other project
+            		previewImageUrl={placeholderImage}/>
+		</div>
+ 		<div>
+			<ThumbnailRedirect 
+           		websiteUrl="http://localhost:3001" // URL to your other project
+            		previewImageUrl={placeholderImage}/>
+		</div>
+  		<div>
+			<ThumbnailRedirect 
+           		websiteUrl="http://localhost:3001" // URL to your other project
+            		previewImageUrl={placeholderImage}/>
+		</div>
 
 </Carousel>
 
