@@ -1,38 +1,144 @@
-.App {
+/* App.css */
+
+/* General Styles */
+body {
+  background-color: #f0f8ff; /* Light blue background for a calming effect */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Kid-friendly font */
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ff6347; /* Bright red-orange for the header */
+  padding: 20px; /* Padding around the header content */
+  display: flex; /* Flexbox layout for aligning items */
+  justify-content: space-between; /* Space between logo and navigation links */
+  align-items: center; /* Center items vertically */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+header h1 {
+  color: white; /* White color for the logo text */
+  margin: 0; /* No margin */
+  font-size: 2.5rem; /* Larger, playful font size */
+}
+
+nav ul {
+  list-style-type: none; /* Remove bullet points from list */
+  margin: 0; /* No margin */
+  padding: 0; /* No padding */
+  display: flex; /* Flexbox layout for horizontal navigation */
+}
+
+nav ul li {
+  margin-left: 15px; /* Space between each navigation link */
+}
+
+nav ul li a {
+  color: white; /* White color for links */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 1.2rem; /* Slightly larger font size */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+  color: #ffe4b5; /* Light peach color on hover */
+}
+
+/* Button Styles */
+button {
+  background-color: #ffa500; /* Bright orange for buttons */
+  color: white; /* White text color */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding for a larger clickable area */
+  font-size: 1rem; /* Font size */
+  border-radius: 12px; /* More rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+  background-color: #ff8c00; /* Darker orange on hover */
+}
+
+/* Input Fields */
+input, textarea {
+  border: 2px solid #ff6347; /* Bright red-orange border */
+  border-radius: 12px; /* More rounded corners */
+  padding: 10px; /* Padding for better readability */
+  font-size: 1rem; /* Font size */
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+input:focus, textarea:focus {
+  outline: none; /* Remove default outline */
+  border-color: #32cd32; /* Green border on focus */
+}
+
+/* Card Styles */
+.card {
+  background-color: #ffffff; /* White background for cards */
+  border-radius: 15px; /* Rounded corners for cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px; /* Padding inside the card */
+  margin: 20px; /* Margin around the card */
+}
+
+/* Hero Section */
+.hero {
   text-align: center;
+  padding: 50px;
+  background-color: #e6f7ff; /* Light blue background for hero section */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero h2 {
+  font-size: 2.5rem;
+  color: #ff6347; /* Bright red-orange for hero heading */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.hero p {
+  font-size: 1.2rem;
+  color: #555; /* Darker color for hero text */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #ff6347; /* Bright red-orange for the footer */
+  color: white; /* White text color */
+  text-align: center; /* Centered text */
+  padding: 10px; /* Padding around the footer content */
+  position: fixed; /* Fixed position at the bottom */
+  width: 100%; /* Full width */
+  bottom: 0; /* Positioned at the bottom */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Stack logo and navigation vertically */
+    align-items: flex-start; /* Align items to the start */
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  nav ul {
+    flex-direction: column; /* Stack navigation links vertically */
+    width: 100%; /* Full width for navigation */
   }
-  to {
-    transform: rotate(360deg);
+
+  nav ul li {
+    margin-left: 0; /* No left margin */
+    margin-bottom: 10px; /* Space between each navigation link */
+  }
+
+  .hero {
+    padding: 20px; /* Less padding for smaller screens */
+  }
+
+  .hero h2 {
+    font-size: 2rem; /* Smaller font size for smaller screens */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Smaller font size for smaller screens */
   }
 }
