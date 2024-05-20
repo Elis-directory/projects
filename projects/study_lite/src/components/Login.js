@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import './Login.css';
 
-
 const Login = () => {
-  // State for email and password
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
-  // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add login logic here
-    console.log('Email:', email);
-    console.log('Password:', password);
+    const auth = getAuth();
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      // Signed in
+      const user = userCredential.user;
+      console.log('User signed in:', user);
+    } catch (error) {
+      setError(error.message);
+    }
   };
 
   return (
@@ -35,6 +40,7 @@ const Login = () => {
         />
         <button type="submit">Login</button>
       </form>
+      {error && <p className="error">{error}</p>}
     </div>
   );
 };

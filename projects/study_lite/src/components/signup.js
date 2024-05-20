@@ -1,17 +1,29 @@
 import React, { useState } from 'react';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import './Signup.css';
 
 const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add signup logic here
-    console.log('Email:', email);
-    console.log('Password:', password);
-    console.log('Confirm Password:', confirmPassword);
+    if (password !== confirmPassword) {
+      setError("Passwords do not match");
+      return;
+    }
+	console.log('Sup');
+    const auth = getAuth();
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      // Signed up
+      const user = userCredential.user;
+      console.log('User signed up:', user);
+    } catch (error) {
+      setError(error.message);
+    }
   };
 
   return (
@@ -41,9 +53,9 @@ const Signup = () => {
         />
         <button type="submit">Signup</button>
       </form>
+      {error && <p className="error">{error}</p>}
     </div>
   );
 };
 
 export default Signup;
-
