@@ -1,28 +1,26 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Header from './components/Header';
-import Home from './components/Home';
-import Login from './components/Login';
-import Signup from './components/Signup';
-import Dashboard from './components/Dashboard';
-import CreateResource from './components/CreateResource';
-import './App.css';
+import './Dashboard.css';
 
-function App() {
+const Dashboard = () => {
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/login" component={Login} />
-          <Route path="/signup" component={Signup} />
-          <Route path="/dashboard" component={Dashboard} />
-          <Route path="/create" component={CreateResource} />
-        </Switch>
+    <div className="dashboard-container">
+      <div className="card">
+        <h2>Interactive Lessons</h2>
+        <p>Engaging lessons that make learning fun.</p>
+        <button onClick={() => alert('Interactive Lessons clicked!')}>Explore Lessons</button>
       </div>
-    </Router>
+      <div className="card">
+        <h2>Collaborative Projects</h2>
+        <p>Work on projects with friends and classmates.</p>
+        <button onClick={() => alert('Collaborative Projects clicked!')}>Start a Project</button>
+      </div>
+      <div className="card">
+        <h2>Progress Tracking</h2>
+        <p>Monitor your learning progress over time.</p>
+        <button onClick={() => alert('Progress Tracking clicked!')}>View Progress</button>
+      </div>
+    </div>
   );
-}
+};
 
-export default App;
+export default Dashboard;

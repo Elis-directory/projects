@@ -14,18 +14,9 @@ const Landingpage = () => {
         </section>
 
         <section id="features" className="cards">
-          <div className="card">
-            <h3>Interactive Lessons</h3>
-            <p>Engaging lessons that make learning fun.</p>
-          </div>
-          <div className="card">
-            <h3>Collaborative Projects</h3>
-            <p>Work on projects with friends and classmates.</p>
-          </div>
-          <div className="card">
-            <h3>Progress Tracking</h3>
-            <p>Track your progress and achievements.</p>
-          </div>
+         
+          
+          
         </section>
       </main>
       

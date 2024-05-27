@@ -6,7 +6,8 @@ import { getFirestore } from "firebase/firestore";
 import Login from './components/Login';
 import LandingPage from './components/Landingpage';
 import Signup from './components/Signup';
-import Header from './components/Header';	 
+import Header from './components/Header';
+import Dashboard from './components/Dashboard';	 
 import './App.css';
 
 function App() {
@@ -22,6 +23,9 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+// Initialize Firebase Authentication and get a reference to the service
+const auth = getAuth(app);
+
 
   return (
     <Router>
@@ -30,6 +34,7 @@ const app = initializeApp(firebaseConfig);
         <Routes>
           <Route path='/Login' element={<Login/>} > </Route>
           <Route path='/signup' element={<Signup/>}> </Route>
+	  <Route path='/dashboard' element={<Dashboard/>}> </Route>
           {/* Add more routes as needed */}
         </Routes>
 	<LandingPage/>
