@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
@@ -25,19 +25,24 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 // Initialize Firebase Authentication and get a reference to the service
 const auth = getAuth(app);
+const [isLandingVisible, setIsLandingVisible] = useState(true);
 
+  const handleLoginClick = () => {
+    setIsLandingVisible(false);
+  };
 
   return (
     <Router>
       <div className="App">
         <Header /> 
         <Routes>
-          <Route path='/Login' element={<Login/>} > </Route>
-          <Route path='/signup' element={<Signup/>}> </Route>
-	  <Route path='/dashboard' element={<Dashboard/>}> </Route>
-          {/* Add more routes as needed */}
+          <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<Signup />} />
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/' element={
+            isLandingVisible ? <LandingPage onLoginClick={handleLoginClick} /> : <Login />
+          } />
         </Routes>
-	<LandingPage/>
       </div>
     </Router>
   );
