@@ -2,7 +2,7 @@
 
 /* General Styles */
 body {
-  background-color: #f0f8ff; /* Light blue background for a calming effect */
+  background-color: #F8F8F8; /* Light blue background for a calming effect */
   font-family: 'Comic Sans MS', cursive, sans-serif; /* Kid-friendly font */
   margin: 0;
   padding: 0;
@@ -55,13 +55,10 @@ button {
   border-radius: 12px; /* More rounded corners */
   cursor: pointer; /* Pointer cursor on hover */
   transition: background-color 0.3s ease; /* Smooth transition */
-  margin-bottom: 8rem;
-   position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, 15%);
- 
+
 }
+
+
 
 button:hover {
   background-color: #ff8c00; /* Darker orange on hover */
@@ -95,7 +92,7 @@ input:focus, textarea:focus {
 .hero {
  
   
-  background-color: #e6f7ff; /* Light blue background for hero section */
+  background-color: #FAFAFA; /* Light blue background for hero section */
 }
 
 .hero img {
@@ -159,4 +156,15 @@ footer {
   .hero p {
     font-size: 1rem; /* Smaller font size for smaller screens */
   }
+}
+
+
+.landingButton {
+
+  margin-bottom: 8rem;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 15%);
+ 
 }

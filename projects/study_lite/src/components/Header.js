@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <header>
-      <h1> NoteNest &#9778; </h1>
+      <h1> neoNest &#9778; </h1>
       <nav>
         <ul>
           <li><Link to="/login">Login</Link></li>
