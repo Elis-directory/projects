@@ -1,0 +1,41 @@
+.AreaMenu {
+  margin: 20px;
+}
+
+.AreaMenu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.AreaMenu li {
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.AreaMenu li:hover {
+  background-color: #ddd;
+}
+
+.Chatbot {
+  margin: 20px;
+}
+
+.chat-window {
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+input[type="text"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 20px;
+}

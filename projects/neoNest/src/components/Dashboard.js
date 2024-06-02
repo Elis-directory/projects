@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Dashboard.css';
 
 const Dashboard = () => {
@@ -7,7 +8,9 @@ const Dashboard = () => {
       <div className="card">
         <h2>Interactive Lessons</h2>
         <p>Engaging lessons that make learning fun.</p>
-        <button onClick={() => alert('Interactive Lessons clicked!')}>Explore Lessons</button>
+	<Link to='/Chatbot'>
+        <button>Explore Lessons</button>
+	</Link>
       </div>
       <div className="card">
         <h2>Collaborative Projects</h2>

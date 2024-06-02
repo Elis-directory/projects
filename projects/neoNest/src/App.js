@@ -7,7 +7,8 @@ import Login from './components/Login';
 import LandingPage from './components/Landingpage';
 import Signup from './components/Signup';
 import Header from './components/Header';
-import Dashboard from './components/Dashboard';	 
+import Dashboard from './components/Dashboard';	
+import Chatbot from './components/Chatbot';	 
 import './App.css';
 
 function App() {
@@ -39,6 +40,7 @@ const [isLandingVisible, setIsLandingVisible] = useState(true);
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/dashboard' element={<Dashboard />} />
+	  <Route path='/chatbot' element={<Chatbot />} />
           <Route path='/' element={
             isLandingVisible ? <LandingPage onLoginClick={handleLoginClick} /> : <Login />
           } />
